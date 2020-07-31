@@ -23,7 +23,7 @@ __all__ = ["Context", "GuildContext", "DMContext"]
 
 
 class Context(DPYContext):
-    """Command invocation context for Red.
+    """Command invocation context for TripleSeven.
 
     All context passed into commands will be of this type.
 

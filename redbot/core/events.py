@@ -39,6 +39,8 @@ ______         _           ______ _                       _  ______       _
 |    // _ \/ _` | |______| | | | | / __|/ __/ _ \| '__/ _` | | ___ \/ _ \| __|
 | |\ \  __/ (_| |          | |/ /| \__ \ (_| (_) | | | (_| | | |_/ / (_) | |_
 \_| \_\___|\__,_|          |___/ |_|___/\___\___/|_|  \__,_| \____/ \___/ \__|
+
+(TripleSeven edition)
 """
 
 _ = Translator(__name__, __file__)
@@ -83,7 +85,7 @@ def init_events(bot, cli_flags):
             str(bot.user),
             "Prefixes: {}".format(", ".join(prefixes)),
             "Language: {}".format(lang),
-            "Red Bot Version: {}".format(red_version),
+            "TripleSeven Bot Version: {}".format(red_version),
             "Discord.py Version: {}".format(dpy_version),
             "Shards: {}".format(bot.shard_count),
             "Storage type: {}".format(data_manager.storage_type()),
@@ -106,7 +108,7 @@ def init_events(bot, cli_flags):
                     "but you're using {}".format(pypi_version, red_version)
                 )
                 outdated_red_message = _(
-                    "Your Red instance is out of date! {} is the current "
+                    "Your TripleSeven instance is out of date! {} is the current "
                     "version, however you are using {}!"
                 ).format(pypi_version, red_version)
                 current_python = platform.python_version()

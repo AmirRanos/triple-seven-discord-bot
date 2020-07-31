@@ -300,7 +300,7 @@ def handle_edit(cli_flags: Namespace):
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
     data_manager.load_basic_configuration(cli_flags.instance_name)
-    red = Red(cli_flags=cli_flags, description="Red V3", dm_help=None, fetch_offline_members=True)
+    red = Red(cli_flags=cli_flags, description="TripleSeven", dm_help=None, fetch_offline_members=True)
     try:
         driver_cls = drivers.get_driver_class()
         loop.run_until_complete(driver_cls.initialize(**data_manager.storage_details()))
@@ -399,7 +399,7 @@ def handle_early_exit_flags(cli_flags: Namespace):
     if cli_flags.list_instances:
         list_instances()
     elif cli_flags.version:
-        print("Red V3")
+        print("TripleSeven")
         print("Current Version: {}".format(__version__))
         sys.exit(0)
     elif cli_flags.debuginfo:
@@ -488,7 +488,7 @@ def main():
         data_manager.load_basic_configuration(cli_flags.instance_name)
 
         red = Red(
-            cli_flags=cli_flags, description="Red V3", dm_help=None, fetch_offline_members=True
+            cli_flags=cli_flags, description="TripleSeven", dm_help=None, fetch_offline_members=True
         )
 
         if os.name != "nt":

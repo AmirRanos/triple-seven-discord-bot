@@ -310,7 +310,7 @@ class Core(commands.Cog, CoreLogic):
 
     @commands.command()
     async def info(self, ctx: commands.Context):
-        """Shows info about Red."""
+        """Shows info about TripleSeven."""
         embed_links = await ctx.embed_requested()
         author_repo = "https://github.com/Twentysix26"
         org_repo = "https://github.com/Cog-Creators"
@@ -319,7 +319,7 @@ class Core(commands.Cog, CoreLogic):
         support_server_url = "https://discord.gg/red"
         dpy_repo = "https://github.com/Rapptz/discord.py"
         python_url = "https://www.python.org/"
-        since = datetime.datetime(2016, 1, 2, 0, 0)
+        since = datetime.datetime(2017, 4, 3, 0, 0)
         days_since = (datetime.datetime.utcnow() - since).days
 
         app_info = await self.bot.application_info()
@@ -338,7 +338,7 @@ class Core(commands.Cog, CoreLogic):
             red_version = "[{}]({})".format(__version__, red_pypi)
 
             about = _(
-                "This bot is an instance of [Red, an open source Discord bot]({}) "
+                "TripleSeven is a modded form of [Red, an open source Discord bot]({}) "
                 "created by [Twentysix]({}) and [improved by many]({}).\n\n"
                 "Red is backed by a passionate community who contributes and "
                 "creates content for everyone to enjoy. [Join us today]({}) "
@@ -361,10 +361,10 @@ class Core(commands.Cog, CoreLogic):
                 embed.add_field(name=_("Outdated"), value=outdated_value)
             if custom_info:
                 embed.add_field(name=_("About this instance"), value=custom_info, inline=False)
-            embed.add_field(name=_("About Red"), value=about, inline=False)
+            embed.add_field(name=_("About TripleSeven"), value=about, inline=False)
 
             embed.set_footer(
-                text=_("Bringing joy since 02 Jan 2016 (over {} days ago!)").format(days_since)
+                text=_("Bringing joy since April 3rd 2017 (over {} days ago!)").format(days_since)
             )
             await ctx.send(embed=embed)
         else:
@@ -373,7 +373,7 @@ class Core(commands.Cog, CoreLogic):
             red_version = "{}".format(__version__)
 
             about = _(
-                "This bot is an instance of Red, an open source Discord bot (1) "
+                "TripleSeven is a modded form of Red, an open source Discord bot (1) "
                 "created by Twentysix (2) and improved by many (3).\n\n"
                 "Red is backed by a passionate community who contributes and "
                 "creates content for everyone to enjoy. Join us today (4) "
@@ -386,7 +386,7 @@ class Core(commands.Cog, CoreLogic):
                 "Instance owned by: [{owner}]\n"
                 "Python:            [{python_version}] (5)\n"
                 "discord.py:        [{dpy_version}] (6)\n"
-                "Red version:       [{red_version}] (7)\n"
+                "TripleSeven version:       [{red_version}] (7)\n"
             ).format(
                 owner=owner,
                 python_version=python_version,
@@ -404,12 +404,12 @@ class Core(commands.Cog, CoreLogic):
                 extras += _("Outdated:          [{state}]\n").format(state=outdated_value)
 
             red = (
-                _("**About Red**\n")
+                _("**About TripleSeven**\n")
                 + about
                 + "\n"
                 + box(extras, lang="ini")
                 + "\n"
-                + _("Bringing joy since 02 Jan 2016 (over {} days ago!)").format(days_since)
+                + _("Bringing joy since April 3rd 2017 (over {} days ago!)").format(days_since)
                 + "\n\n"
             )
 
@@ -929,9 +929,9 @@ class Core(commands.Cog, CoreLogic):
     @commands.command(name="restart")
     @checks.is_owner()
     async def _restart(self, ctx: commands.Context, silently: bool = False):
-        """Attempts to restart Red.
+        """Attempts to restart TripleSeven.
 
-        Makes Red quit with exit code 26.
+        Makes TripleSeven quit with exit code 26.
         The restart is not guaranteed: it must be dealt
         with by the process manager in use."""
         with contextlib.suppress(discord.HTTPException):
@@ -1024,11 +1024,11 @@ class Core(commands.Cog, CoreLogic):
         Use without a description to reset.
         This is shown in a few locations, including the help menu.
 
-        The default is "Red V3".
+        The default is "TripleSeven".
         """
         if not description:
             await ctx.bot._config.description.clear()
-            ctx.bot.description = "Red V3"
+            ctx.bot.description = "TripleSeven"
             await ctx.send(_("Description reset."))
         elif len(description) > 250:  # While the limit is 256, we bold it adding characters.
             await ctx.send(
@@ -1376,7 +1376,7 @@ class Core(commands.Cog, CoreLogic):
         `<language_code>` can be any language code with country code included,
         e.g. `en-US`, `de-DE`, `fr-FR`, `pl-PL`, etc.
 
-        Go to Red's Crowdin page to see locales that are available with translations:
+        Go to TripleSeven's Crowdin page to see locales that are available with translations:
         https://translate.discord.red
 
         To reset to English, use "en-US".
@@ -1830,8 +1830,8 @@ class Core(commands.Cog, CoreLogic):
         driver = storage_type()
         if await ctx.embed_requested():
             e = discord.Embed(color=await ctx.embed_colour())
-            e.title = "Debug Info for Red"
-            e.add_field(name="Red version", value=redver, inline=True)
+            e.title = "Debug Info for TripleSeven"
+            e.add_field(name="TripleSeven version", value=redver, inline=True)
             e.add_field(name="Python version", value=pyver, inline=True)
             e.add_field(name="Discord.py version", value=dpy_version, inline=True)
             e.add_field(name="Pip version", value=pipver, inline=True)
@@ -1847,8 +1847,8 @@ class Core(commands.Cog, CoreLogic):
             await ctx.send(embed=e)
         else:
             info = (
-                "Debug Info for Red\n\n"
-                + "Red version: {}\n".format(redver)
+                "Debug Info for TripleSeven\n\n"
+                + "TripleSeven version: {}\n".format(redver)
                 + "Python version: {}\n".format(pyver)
                 + "Python executable: {}\n".format(sys.executable)
                 + "Discord.py version: {}\n".format(dpy_version)
@@ -2685,11 +2685,11 @@ class Core(commands.Cog, CoreLogic):
 )
 async def license_info_command(ctx):
     """
-    Get info about Red's licenses.
+    Get info about TripleSeven's licenses.
     """
 
     message = (
-        "This bot is an instance of Red-DiscordBot (hereafter referred to as Red)\n"
+        "This bot is a modified form of Red-DiscordBot (hereafter referred to as Red)\n"
         "Red is a free and open source application made available to the public and "
         "licensed under the GNU GPLv3. The full text of this license is available to you at "
         "<https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/develop/LICENSE>"

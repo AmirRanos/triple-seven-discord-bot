@@ -242,7 +242,7 @@ class CogCommandMixin:
 
 
 class Command(CogCommandMixin, DPYCommand):
-    """Command class for Red.
+    """Command class for TripleSeven.
 
     This should not be created directly, and instead via the decorator.
 
@@ -617,7 +617,7 @@ class Command(CogCommandMixin, DPYCommand):
         The on_command_error event is still dispatched
         for commands with a dedicated error handler.
 
-        Red's global error handler will ignore commands with a registered error handler.
+        TripleSeven's global error handler will ignore commands with a registered error handler.
 
         To have red handle specific errors with the default behavior,
         call ``Red.on_command_error`` with ``unhandled_by_cog`` set to True.
@@ -757,7 +757,7 @@ class CogGroupMixin:
 
 
 class Group(GroupMixin, Command, CogGroupMixin, DPYGroup):
-    """Group command class for Red.
+    """Group command class for TripleSeven.
 
     This class inherits from `Command`, with :class:`GroupMixin` and
     `discord.ext.commands.Group` mixed in.
@@ -861,7 +861,7 @@ class CogMixin(CogGroupMixin, CogCommandMixin):
 
 class Cog(CogMixin, DPYCog, metaclass=DPYCogMeta):
     """
-    Red's Cog base class
+    TripleSeven's Cog base class
 
     This includes a metaclass from discord.py
     """

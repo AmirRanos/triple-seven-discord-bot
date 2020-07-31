@@ -104,7 +104,7 @@ class RedBase(
             help__verify_checks=True,
             help__verify_exists=False,
             help__tagline="",
-            description="Red V3",
+            description="TripleSeven",
             invite_public=False,
             invite_perm=0,
             disabled_commands=[],
@@ -154,7 +154,7 @@ class RedBase(
             kwargs["command_prefix"] = prefix_manager
 
         if "owner_id" in kwargs:
-            raise RuntimeError("Red doesn't accept owner_id kwarg, use owner_ids instead.")
+            raise RuntimeError("TripleSeven doesn't accept owner_id kwarg, use owner_ids instead.")
 
         self._owner_id_overwrite = cli_flags.owner
 
@@ -228,7 +228,7 @@ class RedBase(
 
     def before_invoke(self, coro: T_BIC) -> T_BIC:
         """
-        Overridden decorator method for Red's ``before_invoke`` behavior.
+        Overridden decorator method for TripleSeven's ``before_invoke`` behavior.
 
         This can safely be used purely functionally as well.
 
@@ -311,7 +311,7 @@ class RedBase(
     ) -> bool:
         """
         This checks if a user or member is allowed to run things,
-        as considered by Red's whitelist and blacklist.
+        as considered by TripleSeven's whitelist and blacklist.
 
         If given a user object, this function will check the global lists
 
@@ -409,7 +409,7 @@ class RedBase(
     async def ignored_channel_or_guild(self, ctx: commands.Context) -> bool:
         """
         This checks if the bot is meant to be ignoring commands in a channel or guild,
-        as considered by Red's whitelist and blacklist.
+        as considered by TripleSeven's whitelist and blacklist.
 
         Parameters
         ----------
@@ -685,7 +685,7 @@ class RedBase(
         self, ctx: commands.Context, help_for: Union[commands.Command, commands.GroupMixin, str]
     ):
         """
-        Invokes Red's helpformatter for a given context and object.
+        Invokes TripleSeven's helpformatter for a given context and object.
         """
         return await self._help_formatter.send_help(ctx, help_for)
 
@@ -1280,7 +1280,7 @@ class RedBase(
             pass
 
     async def shutdown(self, *, restart: bool = False):
-        """Gracefully quit Red.
+        """Gracefully quit TripleSeven.
 
         The program will exit with code :code:`0` by default.
 

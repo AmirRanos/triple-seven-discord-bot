@@ -48,7 +48,7 @@ config_file = config_dir / "config.json"
 
 def create_temp_config():
     """
-    Creates a default instance for Red, so it can be ran
+    Creates a default instance for TripleSeven, so it can be ran
     without creating an instance.
 
     .. warning:: The data of this instance will be removed

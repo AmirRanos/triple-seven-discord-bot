@@ -27,7 +27,7 @@ class NoSuchCog(ImportError):
 
 
 class CogManager:
-    """Directory manager for Red's cogs.
+    """Directory manager for TripleSeven's cogs.
 
     This module allows you to load cogs from multiple directories and even from
     outside the bot directory. You may also set a directory for downloader to
@@ -309,7 +309,7 @@ _ = Translator("CogManagerUI", __file__)
 
 @cog_i18n(_)
 class CogManagerUI(commands.Cog):
-    """Commands to interface with Red's cog manager."""
+    """Commands to interface with TripleSeven's cog manager."""
 
     @commands.command()
     @checks.is_owner()

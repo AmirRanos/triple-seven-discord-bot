@@ -876,7 +876,7 @@ def cost(amount: int):
     You can intentionally refund by raising `AbortPurchase`
     (this error will be consumed and not show to users)
 
-    Other exceptions will propagate and will be handled by Red's (and/or
+    Other exceptions will propagate and will be handled by TripleSeven's (and/or
     any other configured) error handling.
     """
     if not isinstance(amount, int) or amount < 0:
