@@ -1,3 +1,19 @@
+# TripleSeven
+
+TripleSeven is a custom-built bot made specifically for an invite-only [Discord](https://discord.com/) server of over a hundred members. By running our own Discord bot, we have an auditable and smaller "trusted base" of code for sensitive actions such as role and message management.
+
+## Brief History
+
+TripleSeven is a modded version of [Red](https://github.com/Cog-Creators/Red-DiscordBot), an open-source Discord bot. At the bottom of this document is the original `README` for Red. TripleSeven was originally created in early 2017 as a fork of Red V1, but a breaking change to Discord's API made July 2020 prompted us to open-source and update the bot to the latest version of Red.
+
+## Installation
+
+Because this bot is only available as a source code download from this page, the installation is slightly different. Instead of `pip install redbot`, installation should be done by navigating to the root of this repository and running `pip install .`. Upgrading similarly should be done with `pip install .`.
+
+This package acts as a replacement for the `redbot` command and package, and will create a version conflict if installed in the same virtual environment as the vanilla `redbot` package. If you want to install both TripleSeven and Red on the same computer, you will need to create separate virtual environments for each.
+
+# Original Red Documentation
+
 <h1 align="center">
   <br>
   <a href="https://github.com/Cog-Creators/Red-DiscordBot/tree/V3/develop"><img src="https://imgur.com/pY1WUFX.png" alt="Red - Discord Bot"></a>
